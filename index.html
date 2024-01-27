@@ -1,35 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify | Imersão</title>
-    
-    <link rel="stylesheet" href="./src/styles/reset.css">
-    <link rel="stylesheet" href="./src/styles/sidebar-footer.css">
-    
+    <title>Imersão Dev | Spotfy</title>
+    <link rel="stylesheet" href="./src/styles/reset.css"/>
+    <link rel="stylesheet" href="./src/styles/vars.css"/>
+    <link rel="stylesheet" href="./src/styles/sidebar-footer.css"/>
+    <link rel="stylesheet" href="./src/styles/main-content.css"/>
+     
+    <!--Links para termos acesso aos icones do site https://fontawesome.com/icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css"
-    integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
+        integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
-    integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
+        integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
 
-</head>
-<body>
-    <div class="sidebar">
-        <nav class="sidebar_navigation">
-            <div class="logo">
+     
+  </head>
+  <body>
+    <!--Começando a criar o menu-navegação da lateral esquerda-->
+     <div class="sidebar">
+        <nav class="sidebar__navigation">
+             <div class="logo">
+                <!--Aqui fica o logo da spotfy dentro desse menu-navegação na lateral esquerda-->
                 <a href="">
-                    <img src="./assets/icons/logo-spotify.png" alt="Logo Spotify"/>
+                    <img src="./src/assets/icons/logo-spotify.png" alt="Logo do Spotfy">
                 </a>
-            </div>
+             </div>
+            <!--Criação de uma lista com os conteúdos do menu-navegação da lateral esquerda-->
             <ul>
+                <!--Primeiro link da lista contando com um icone de uma casinha-->
                 <li>
                     <a href="">
                         <span class="fa fa-home"></span>
-                        <span>Ínicio</span>
+                        <span>Início</span>
                     </a>
                 </li>
+                <!--Segundo link da lista de busca com um incone de lupa-->
                 <li>
                     <a href="">
                         <span class="fa fa-search"></span>
@@ -38,11 +45,12 @@
                 </li>
             </ul>
         </nav>
-
+        
+        <!--Aqui vai sar a parte do menu lateral da library-->
         <div class="library">
             <div class="library__content">
                 <button class="library__button">
-                    <span class="fa fas fa-book"></span>
+                    <span class="fa fa-book"></span>
                     <span>Sua biblioteca</span>
                 </button>
                 <span class="fa fa-plus"></span>
@@ -50,25 +58,60 @@
 
             <section class="section-playlist">
                 <div class="section-playlist__content">
-                    <span class="text title">Crie sua primeira playlist</span>
-                    <span class="text subtitle">É fácil, vamos te ajudar.</span>
+                    <span class="text title"> Crie sua primeira playlist</span>
+                    <span class="text subtitle">É fácil, vmaos te ajudar.</span>
                     <button class="section-playlist__button">Criar playlist</button>
                 </div>
             </section>
 
-            <div class="cookies ">
+            <div class="cookies">
                 <a href="">Cookies</a>
             </div>
 
-            <div class="language">
-                <button class="language__button">
-                    <span class="fa fa-globe">Português Brasil</span>
+            <div class="languages">
+                <button class="languages__button">
+                    <span class="fa fa-globe"></span>
+                    <span>Português do Brasil</span>
                 </button>
             </div>
-
         </div>
-
     </div>
 
-</body>
+    <!--Conteúdo principal da página junto com o header-->
+    <main>
+        <div class="main-container">
+            <nav class="header__navigation">
+                <div class="navigation">
+                    <button class="arrow-left">
+                        <img src="./src/assets/icons/small-left.png" alt="Seta esquerda"/>
+                    </button>
+                    <button class="arrow-right">
+                        <img src="./src/assets/icons/small-right.png" alt="Seta direita"/>
+                    </button>
+                </div>
+                <div class="header__search">
+                    <img src="./src/assets/icons/search.png" alt=""/>
+                    <input id="search-input" type="text" maxlength="800" placeholder="O que você quer ouvir?"/>
+                </div>
+                <div class="header__login">
+                    <button class="subscribe">Inscreva-se</button>
+                    <button class="login">Entrar</button>
+                </div>
+            </nav> 
+        </div>
+    </main>
+    <!--Conteúdo do Rodapé-->
+    <footer class="disclaimer-premium">
+        <div class="text">
+            <p class="disclaimer-premium__title">Testar o Premium de graça</p>
+            <p class="disclaimer-premium__subtitle">
+                Inscreva-se para curtir música ilimitada e podcasts só com alguns
+                anúncios. Não precisa de cartão de crédito.
+            </p>
+        </div>
+        <div class="button">
+            <button type="button">Inscreva-se grátis</button>
+        </div>
+    </footer>
+  </body>
 </html>

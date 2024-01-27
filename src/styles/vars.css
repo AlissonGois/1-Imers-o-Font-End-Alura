@@ -1,4 +1,14 @@
 :root{
-    /*FONT*/
+    /*Variáveis de fontes*/
     --font-dm-sans: "DM Sans", sans-serif;
+
+    /*Variáveis de cores*/
+    --cor1-preto: #000;
+    --cor2-branco: #fff;
+    --cor3-cinza1: #121212;
+    --cor4-cinza2: #242424;
+    --cor5-cinza3: #878787;
+    --cor6-cinza4: #b3b3b3;
+    --bg-icon: #131313;
+    --bg-arrow-color: rgb(0,0,0,7);
 }
